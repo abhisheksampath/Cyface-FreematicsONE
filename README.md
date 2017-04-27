@@ -34,8 +34,11 @@ Just a heads up if you’re using windows you need to create an inbound rule for
 Since the server stores everything in memory the time will come when your memory is full and the server will crash. So do not let it run forever. There will be errors! The connection will be reset from time to time and it might take some time at the beginning until the first data is transmitted. The server might also throw some error messages if it encounters not implemented entries.
 
 License
-The Cyface freematics server is available under MIT License. This means:
+
+The Cyface logger is available under MIT License. This means:
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 Outlook
+
 Over time and as we require new functionality this server might become more stable and support additional features. Since we are a small team we are also happy about pull requests providing fixes or new features.
 
