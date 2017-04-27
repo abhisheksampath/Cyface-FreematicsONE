@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1493316274024" analysisTimestamp="1493316274047" release="">
+  <Project projectName="">
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\MessboxServerApplication.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\controller\Channels.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\controller\EntryIdentifier.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\controller\Obd2Controller$1.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\controller\Obd2Controller.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\persistence\Acceleration.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\persistence\Channel.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\persistence\DataRepository.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\persistence\DeviceData.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\persistence\GpsData.class</Jar>
+    <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\main\de\cyface\obd2\persistence\InputData.class</Jar>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\1.4.0.RELEASE\bcefa854b75a7e0bcf612bfbe030bdcb05c9da82\spring-boot-starter-web-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.1\905075e6c80f206bbe6cf1e809d2caa69f420c76\commons-lang3-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\1.4.0.RELEASE\9eb9be27958cc17de9673a6fbbdaf16fb65a7fdc\spring-boot-starter-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\1.4.0.RELEASE\9f3530cbc1998b9aeebd0a5c070f5d4f24357610\spring-boot-starter-tomcat-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-validator\5.2.4.Final\fb18766b576aa6632bcfe9a20a023cbd52bf9769\hibernate-validator-5.2.4.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.8.1\c04eb2cc599cd1742889bfa7cc41878db0d152f5\jackson-databind-2.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\4.3.2.RELEASE\562b3b775b6e8e7113b5d23b21946f939658bd19\spring-web-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\4.3.2.RELEASE\99b68a8aca2ed67ad523e7341a90dd1c90fd669e\spring-webmvc-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\1.4.0.RELEASE\3b4ea475b40eb9dc966fb3c650c97bfabb988f9\spring-boot-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\1.4.0.RELEASE\9fa1ac16ac6fd96d7df2c72b55ba9814be082ffc\spring-boot-autoconfigure-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\1.4.0.RELEASE\53303110c92c921e09e1c9bc8b9bf4c1935c2f12\spring-boot-starter-logging-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\4.3.2.RELEASE\fd2f3cf45d3c84f293cb7ee3ab7d24c979495552\spring-core-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.17\7a27ea250c5130b2922b86dea63cbb1cc10a660c\snakeyaml-1.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\8.5.4\48ee085e4b3f71e98535e4c17c0ce1394812a94a\tomcat-embed-core-8.5.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\8.5.4\2d53f2e3b6b456cb7ac82e1549a944db7f5b05bf\tomcat-embed-el-8.5.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\8.5.4\211d26f536aee3283345aa5b1c479e937401fcd2\tomcat-embed-websocket-8.5.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\javax.validation\validation-api\1.1.0.Final\8613ae82954779d518631e05daa73a6a954817d5\validation-api-1.1.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.3.0.Final\3616bb87707910296e2c195dc016287080bba5af\jboss-logging-3.3.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.3.1\2ad2fd09dcf5607ca96f8ef432096a96986c40a\classmate-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.8.1\4465fda9834ab27eac2a76f9a378738d15a9b4fa\jackson-annotations-2.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.8.1\fd13b1c033741d48291315c6370f7d475a42dccf\jackson-core-2.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\4.3.2.RELEASE\caef216e995f565dd4ab165ec5918ff44487615d\spring-aop-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\4.3.2.RELEASE\9e87f48f65a33a017f2dd027911947a28be29f93\spring-beans-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\4.3.2.RELEASE\e52782b824e097c3b1586b497fc6be0e95020770\spring-context-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\4.3.2.RELEASE\7676acd4dde9d186b7f882edce3131dc62dcb590\spring-expression-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.1.7\9865cf6994f9ff13fce0bf93f2054ef6c65bb462\logback-classic-1.1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.21\331b564a3a42f002a0004b039c1c430da89062cd\jcl-over-slf4j-1.7.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.21\2f22c882ffa479d1e9ff4eb0e8e2c29f2a0871ed\jul-to-slf4j-1.7.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\log4j-over-slf4j\1.7.21\b3700d97464d99bdcd42c0177d6e7951c94d75ff\log4j-over-slf4j-1.7.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.1.7\7873092d39ef741575ca91378a6a21c388363ac8\logback-core-1.1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.21\139535a69a4239db087de9bab0bee568bf8e0b70\slf4j-api-1.7.21.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\MessboxServerApplication.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\controller\Channels.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\controller\Obd2Controller.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\persistence\Acceleration.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\persistence\Channel.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\persistence\DataRepository.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\persistence\GpsData.java</SrcDir>
+    <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\main\java\de\cyface\obd2\persistence\InputData.java</SrcDir>
+  </Project>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="de.cyface.obd2.controller.Obd2Controller">
+      <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="33" end="236" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    </Class>
+    <Method classname="de.cyface.obd2.controller.Obd2Controller" name="parseBody" signature="(Ljava/lang/String;)Lde/cyface/obd2/persistence/InputData;" isStatic="false">
+      <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="136" end="197" startBytecode="0" endBytecode="879" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="longValue" signature="()J" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="1000" end="1000" startBytecode="0" endBytecode="28" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="parseLong" signature="(Ljava/lang/String;)J" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="152" end="152" startBytecode="93" endBytecode="93" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="156" end="156" startBytecode="117" endBytecode="117" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="de.cyface.obd2.controller.Obd2Controller">
+      <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="33" end="236" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    </Class>
+    <Method classname="de.cyface.obd2.controller.Obd2Controller" name="parseIntValue" signature="(Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="236" end="236" startBytecode="0" endBytecode="59" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="893" end="893" startBytecode="0" endBytecode="28" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="236" end="236" startBytecode="4" endBytecode="4" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="de.cyface.obd2.controller.Obd2Controller">
+      <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="33" end="236" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    </Class>
+    <Method classname="de.cyface.obd2.controller.Obd2Controller" name="parseLongValue" signature="(Ljava/lang/String;)J" isStatic="false">
+      <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="210" end="210" startBytecode="0" endBytecode="59" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="longValue" signature="()J" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long" start="1000" end="1000" startBytecode="0" endBytecode="28" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="parseLong" signature="(Ljava/lang/String;)J" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="de.cyface.obd2.controller.Obd2Controller" start="210" end="210" startBytecode="4" endBytecode="4" sourcefile="Obd2Controller.java" sourcepath="de/cyface/obd2/controller/Obd2Controller.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 27 Apr 2017 23:34:34 +0530" total_classes="11" referenced_classes="57" total_bugs="3" total_size="344" num_packages="3" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="6.80" clock_seconds="1.49" peak_mbytes="156.09" alloc_mbytes="3611.00" gc_seconds="0.01" priority_1="3">
+    <PackageStats package="de.cyface" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="de.cyface.MessboxServerApplication" sourceFile="MessboxServerApplication.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.cyface.obd2.controller" total_bugs="3" total_types="4" total_size="123" priority_1="3">
+      <ClassStats class="de.cyface.obd2.controller.Channels" sourceFile="Channels.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.controller.EntryIdentifier" sourceFile="Obd2Controller.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.controller.Obd2Controller" sourceFile="Obd2Controller.java" interface="false" size="83" bugs="3" priority_1="3"/>
+      <ClassStats class="de.cyface.obd2.controller.Obd2Controller$1" sourceFile="Obd2Controller.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.cyface.obd2.persistence" total_bugs="0" total_types="6" total_size="214">
+      <ClassStats class="de.cyface.obd2.persistence.Acceleration" sourceFile="Acceleration.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.persistence.Channel" sourceFile="Channel.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.persistence.DataRepository" sourceFile="DataRepository.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.persistence.DeviceData" sourceFile="DataRepository.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.persistence.GpsData" sourceFile="GpsData.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="de.cyface.obd2.persistence.InputData" sourceFile="InputData.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="170" invocations="519" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="13826" standardDeviationMircosecondsPerInvocation="833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="63" invocations="57" avgMicrosecondsPerInvocation="1121" maxMicrosecondsPerInvocation="9899" standardDeviationMircosecondsPerInvocation="2033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="61" invocations="193" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="3936" standardDeviationMircosecondsPerInvocation="457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="44" invocations="56" avgMicrosecondsPerInvocation="802" maxMicrosecondsPerInvocation="32346" standardDeviationMircosecondsPerInvocation="4283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="43" invocations="56" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="6108" standardDeviationMircosecondsPerInvocation="1297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="43" invocations="57" avgMicrosecondsPerInvocation="763" maxMicrosecondsPerInvocation="8114" standardDeviationMircosecondsPerInvocation="1374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="42" invocations="57" avgMicrosecondsPerInvocation="750" maxMicrosecondsPerInvocation="6048" standardDeviationMircosecondsPerInvocation="1300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="42" invocations="57" avgMicrosecondsPerInvocation="740" maxMicrosecondsPerInvocation="7860" standardDeviationMircosecondsPerInvocation="1362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="41" invocations="84" avgMicrosecondsPerInvocation="492" maxMicrosecondsPerInvocation="13839" standardDeviationMircosecondsPerInvocation="1766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="38" invocations="526" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="722" standardDeviationMircosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="35" invocations="56" avgMicrosecondsPerInvocation="642" maxMicrosecondsPerInvocation="4843" standardDeviationMircosecondsPerInvocation="875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="483" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="1259" standardDeviationMircosecondsPerInvocation="119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="30" invocations="56" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="4097" standardDeviationMircosecondsPerInvocation="787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="29" invocations="56" avgMicrosecondsPerInvocation="528" maxMicrosecondsPerInvocation="11140" standardDeviationMircosecondsPerInvocation="1481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="22" invocations="42" avgMicrosecondsPerInvocation="532" maxMicrosecondsPerInvocation="4021" standardDeviationMircosecondsPerInvocation="796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="57" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="5206" standardDeviationMircosecondsPerInvocation="793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="57" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="8269" standardDeviationMircosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="57" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="3171" standardDeviationMircosecondsPerInvocation="564"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="57" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="3578" standardDeviationMircosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="14" invocations="11" avgMicrosecondsPerInvocation="1360" maxMicrosecondsPerInvocation="13397" standardDeviationMircosecondsPerInvocation="3808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="57" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="1711" standardDeviationMircosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="12" invocations="11" avgMicrosecondsPerInvocation="1127" maxMicrosecondsPerInvocation="7596" standardDeviationMircosecondsPerInvocation="2090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="57" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="3287" standardDeviationMircosecondsPerInvocation="488"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
