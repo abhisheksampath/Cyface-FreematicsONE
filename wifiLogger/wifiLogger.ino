@@ -112,7 +112,8 @@ void setup() {
   sprintf_P(buffer, PSTR("AT+CIPSTART=\"TCP\",\"%s\",%d\r\n"), SERVER_URL, SERVER_PORT);
   if (sendCommand(buffer, 10000, "Linked")) {
     Serial.println(F("OK"));
-  } else {
+  } 
+  else {
     Serial.println(F("failed"));
   }
 
@@ -127,6 +128,7 @@ void Openfile()
   char path[8] = "/tests";
   char charBuff[85];
   unsigned int index=0;
+  int counter=0;
    
   if (!SD.begin(CS_PIN)) 
     Serial.println(F("begin failed"));
@@ -150,6 +152,7 @@ void Openfile()
       char *p = header;
       char someChar = file.read();
       
+      
       if(someChar != '\n' && someChar != '\r')
       {
        charBuff[index++]=someChar; 
@@ -160,10 +163,10 @@ void Openfile()
           {
           charBuff[index]='\0';
           Serial.println(charBuff);
-          
+          counter++;
           
   
-          p += sprintf_P(p, PSTR("%s %s HTTP/1.1\r\nUser-Agent: ONE\r\nHost: %s\r\nConnection: %s\r\nKeep-Alive: timeout=500, max=200\r\n"),"POST", path, SERVER_URL, "keep-alive");
+          p += sprintf_P(p, PSTR("%s %s HTTP/1.1\r\nUser-Agent: ONE\r\nHost: %s\r\nConnection: %s\r\nKeep-Alive: timeout=500, max=5000\r\n"),"POST", path, SERVER_URL, "keep-alive");
           Serial.println(index);
           p += sprintf_P(p, PSTR("Content-length: %u\r\n"), index);
     
@@ -184,8 +187,31 @@ void Openfile()
 //            Serial.println(F("Data sent 2"));
           }
           else
-            Serial.println(F("Error Sending"));
+          {
+            Serial.println(F("Error"));
+            counter=150;  //To reset the tcp conection
+          }
           Serial.println(buffer);
+          
+          if(counter>99){
+            Serial.println("RE");
+            sprintf_P(buffer, PSTR("AT+CIPCLOSE\r\n"));
+            sendCommand(buffer);
+            counter=0;
+
+            delay(2000);
+             
+            sprintf_P(buffer, PSTR("AT+CIPSTART=\"TCP\",\"%s\",%d\r\n"), SERVER_URL, SERVER_PORT);
+            if(sendCommand(buffer, 10000, "Linked"))
+            {
+              Serial.println("L");
+              } 
+              else
+              {
+              Serial.println("NL");
+              } 
+              
+          }
          }
        buffer[0] = 0;         
        index = 0;
