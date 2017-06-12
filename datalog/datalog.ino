@@ -1,10 +1,3 @@
-/*************************************************************************
-* This sketch demonstrates WIFI communication via the ESP8266 WIFI xBee
-* plugged in Freematics ONE's xBee socket
-* Distributed under BSD License
-* Visit http://freematics.com/products/freematics-one for more information
-* Developed by Stanley Huang <stanleyhuangyc@gmail.com>
-*************************************************************************/
 
 #include <SPI.h>
 #include <Wire.h>
@@ -12,11 +5,13 @@
 #include <FreematicsONE.h>
 #include <TinyGPS.h>
 #include "config.h"
+#include<string.h>
 
 TinyGPS gps;
 COBDSPI one;
 
 File dataFiles;
+bool firstFlag=true;
 
 void setup() {
   byte ret;
@@ -51,7 +46,7 @@ void setup() {
 //    SD.mkdir("/DataLog");
 
  // Open up the file we're going to log to!
-  dataFiles = SD.open("datalog.csv", FILE_WRITE);
+  dataFiles = SD.open("datalog3.csv", FILE_WRITE);
   if (! dataFiles) {
     Serial.println(F("File error"));
     // Wait forever since we cant write data
@@ -74,7 +69,21 @@ void setup() {
  
   
 }
-
+void vin()
+{
+  String datas="";
+  char vin[10];
+      if (one.getVIN(vin, sizeof(vin))) {
+          datas = datas + '#' + String(vin);
+      }
+      else
+      { 
+//        Serial.println(F("VIN not retrieved"));
+        datas = datas + '#' + String("12345");
+      }
+      dataFiles.println(datas);
+      Serial.println(datas);
+  }
 void showGPS()
 {
     // parsed GPS data is ready
@@ -140,14 +149,8 @@ void showGPS()
 //      Serial.print(AcZ,8);
       
       Serial.println();
-
-
-      data = data + String(date) + "," + String(time) + "," + String((float)lat / 100000,5) + "," + String((float)lon / 100000,5) + "," + String(gps.altitude()/ 100) + "," + String(gps.speed()* 1852 / 100000) + "," + String(gps.satellites()) + "," + String(AcX,8) + "," + String(AcY,8) + "," + String(AcZ,8) + ",0";
-
   
-//      data += String(1);
-//       data += ",";
-//        data += String(2);
+      data = data + String(date) + "," + String(time) + "," + String((float)lat / 100000,5) + "," + String((float)lon / 100000,5) + "," + String(gps.altitude()/ 100) + "," + String(gps.speed()* 1852 / 100000) + "," + String(gps.satellites()) + "," + String(AcX,8) + "," + String(AcY,8) + "," + String(AcZ,8) + ",0";
 
       dataFiles.println(data);
       Serial.println(data);
@@ -157,7 +160,7 @@ void showGPS()
 
 void loop() {
   
-    char buf[150];
+    char buf[130];
     //delay(10000);
     byte n = one.getGPSRawData(buf, sizeof(buf));
     if (n > 0) {
@@ -171,6 +174,13 @@ void loop() {
         }
       if (!updated || updated) {
         ready = true;
+        if(firstFlag)
+        {
+          
+          vin();
+          dataFiles.flush();
+          firstFlag=false;
+        }
         showGPS(); 
         dataFiles.flush();
       }
