@@ -6,7 +6,9 @@ Cyface is in no way associated with Freematics.
 
 Prerequisites
 
-To use this server you need a FreematicsONE version 4 OBD 2 dongle with the ESP8266 Wifi module and some server hardware. For simple tests a common PC or Mac should suffice. The server was developed and tested on a Dell XPS 13 (9350) running Ubuntu Linux 16.04. The dongle with the GSM module might work, but has not been tested. I guess if you want to use that one you need to make the server available on the internet. Beware that the server has not been developed with safety and security in mind!
+To use this server you need a FreematicsONE version 4 OBD 2 dongle with the ESP8266 Wifi module and some server hardware. For simple tests a common PC or Mac should suffice. The server was developed and tested on a Dell XPS 13 (9350) running Ubuntu Linux 16.04.
+The dongle with the GSM module might work, but has not been tested. I guess if you want to use that one you need to make the server available on the internet. Beware that the server has not been developed with safety and security in mind!
+
 
 Running the Server
 
@@ -18,18 +20,29 @@ A successful clone places all the source files in your current directory. From t
 
 To prepare the server to receive data you need to setup a connection for the FreematicsONE. During development I used to setup my laptop as access point for the dongle. On Ubuntu Linux 16.04 this works via the network manager, for example like so. On older versions of Ubuntu it requires some hacking in some configuration files, for example like so. It should be possible on Windows too but my attempts have been unsuccessful so far. This might just be my inability to do anything more complex than starting a game on Windows. So if you are a Windows user I am sure you'll manage.
 
+
 Running the OBD II Software
 
-To submit data to the server you need the Arduino telelogger sketch for the FreematicsONE. It is available from the Freematics GitHub repository. However do not use that version at the moment. We created a fork and made some fixes to the code, that are mandatory for the telelogger to work. There is a pull request and as soon as that one has been merged you might also use the Freematics code directly. Until then checkout the FreematicsONE sketches from here using a command like: > git clone https://github.com/gogetoss4/Cyface-Logger.git. Install an Arduino IDE! Open the file firmware_v4/datalog/datalog.ino in your IDE. This should automatically open the files config.h and datalogger.ino in separate tabs.
+To submit data to the server you need the Arduino telelogger sketch for the FreematicsONE. It is available from the Freematics GitHub repository. However do not use that version at the moment. We created a fork and made some fixes to the code, that are mandatory for the telelogger to work. There is a pull request and as soon as that one has been merged you might also use the Freematics code directly. Until then checkout the FreematicsONE sketches from here using a command like: > git clone https://github.com/gogetoss4/Cyface-Logger.git. Install an Arduino IDE! Open the file firmware_v4/datalog/datalog.ino in your IDE. This should automatically open the files config.h and datalogger.ino in separate tabs. 
 
 To run the datalogger on your FreematicsONE connect the dongle via USB to your PC! Click the upload button in the upper left corner of your Arduino IDE! As soon as the log window in the lower are of the IDE tells you “Done compiling.”, hit Ctrl+Shift+M to see the output from your dingle. Although, you probably need to be a little patient when you run the program at the first time as the GPS in the Freematics ONE take the while to connect successfully. Once that’s done, it should successfully start logging data into the SD card.
 
-Once the logging’s done successfully, the data would reside in a file called “datalog.csv” in the SD card. You can open it open to check if it’s blank or has data in it just to reassure. Now we need to switch the code in the Freematics stick by uploading a second file while can be found in firmware_v4/wifiLogger/wifiLogger.ino. In wifi.ino, right on top you can setup the data for you Wifi hotspot: SSID, password and server address. The default server address if you are running the hotspot is 10.41.0.1. If on windows, the address can be found by going to the command prompt and executing the code – “ipconfig”. Just note down the IPV4 address of your wifi hotspot. The server port of the server is 8080.
+Once the logging’s done successfully, the data would reside in a file called “datalog.csv” in the SD card. You can open it open to check if it’s blank or has data in it just to reassure. The data that is logged in the csv file is of two types. The first being a # followed by a number, the number being the VIN ( Vehicle Identification Number).   As for the second type is a series of values separated by a comma or split into columns when viewed, where each of the column is as follows
 
-Just a heads up if you’re using windows you need to create an inbound rule for the port: 8080 in you windows firewall since the firewall denies you permission to connect to the server by default. Similar to the datalogger you can run this sketch by clicking the upload button on the top left corner followed up the Ctrl+Shift+M once uploading is done. After this the data would be transmitted to the server one by one.
+Date, time, latitude, longitude, altitude, speed, satellites, Accelerometer X, Y, Z , flag(0,1) for whether the data has been sent successfully.
+
+Now we need to switch the code in the Freematics stick by uploading a second file while can be found in firmware_v4/wifiLogger/wifiLogger.ino. In wifi.ino, right on top you can setup the data for you Wifi hotspot: SSID, password and server address. The default server address if you are running the hotspot is 10.41.0.1. If on windows, the address can be found by going to the command prompt and executing the code – “ipconfig”. Just note down the IPV4 address of your wifi hotspot. The server port of the server is 8080.
+
+Just a heads up if you’re using windows you need to create an inbound rule for the port: 8080 in you windows firewall since the firewall denies you permission to connect to the server by default. Similar to the datalogger you can run this sketch by clicking the upload button on the top left corner followed up the Ctrl+Shift+M once uploading is done. After this the data would be transmitted to the server one by one. At the end of the trasmission. If it were completely successful, the serial monitor would print the word "completed", which signifies the end of the file.
 
 Since the server stores everything in memory the time will come when your memory is full and the server will crash. So do not let it run forever. There will be errors! The connection will be reset from time to time and it might take some time at the beginning until the first data is transmitted. The server might also throw some error messages if it encounters not implemented entries.
 
-License 
+License
 
-The Cyface server is available under MIT License. This means: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Outlook Over time and as we require new functionality this server might become more stable and support additional features. Since we are a small team we are also happy about pull requests providing fixes or new features.
+The Cyface logger is available under MIT License. This means:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Outlook
+
+Over time and as we require new functionality this server might become more stable and support additional features. Since we are a small team we are also happy about pull requests providing fixes or new features.
+
