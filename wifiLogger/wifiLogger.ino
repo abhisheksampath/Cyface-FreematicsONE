@@ -18,7 +18,7 @@ File file;
 char buffer[250];
 void Openfile();
 
-byte sendCommand(const char* cmd, int timeout = 1000, const char* expected1 = "OK", const char* expected2 = 0)
+byte sendCommand(const char* cmd, int timeout = 2000, const char* expected1 = "OK", const char* expected2 = 0)
 {
   if (cmd) {
     one.xbWrite(cmd);
@@ -69,7 +69,7 @@ void setup() {
 
   Serial.print(F("Entering station mode..."));
   sprintf_P(buffer, PSTR("AT+CWMODE=1\r\n"));
-  if (sendCommand(buffer, 1000, "OK", "no change")) {
+  if (sendCommand(buffer, 2000, "OK", "no change")) {
     Serial.println(F("OK")); 
   } else {
     Serial.println(F("dead")); 
@@ -90,7 +90,7 @@ void setup() {
   ret = sendCommand(buffer, 20000, "OK", "ERROR");
   if (ret == 1) {
     // get IP address
-    if (sendCommand("AT+CIFSR\r\n", 1000, "OK")) {
+    if (sendCommand("AT+CIFSR\r\n", 2000, "OK")) {
 //      char *s = strstr(buffer, "CIFSR");
 //      if (s) {
 //        s += 8;
@@ -129,6 +129,7 @@ void Openfile()
   char charBuff[85];
   unsigned int index=0;
   int counter=0;
+  int errFlag=0;
    
   if (!SD.begin(CS_PIN)) 
     Serial.println(F("begin failed"));
@@ -153,7 +154,7 @@ void Openfile()
       char someChar = file.read();
       
       
-      if(someChar != '\n' && someChar != '\r')
+      if(someChar != '\n' && someChar != '\r' && errFlag==0)
       {
        charBuff[index++]=someChar; 
       }
@@ -161,30 +162,31 @@ void Openfile()
       {
        if(index > 0)
           {
-          charBuff[index]='\0';
+          if(errFlag==0)
+            charBuff[index]='\0';
+          
           Serial.println(charBuff);
           counter++;
           
   
-          p += sprintf_P(p, PSTR("%s %s HTTP/1.1\r\nUser-Agent: ONE\r\nHost: %s\r\nConnection: %s\r\nKeep-Alive: timeout=500, max=5000\r\n"),"POST", path, SERVER_URL, "keep-alive");
+          p += sprintf_P(p, PSTR("%s %s HTTP/1.1\r\nUser-Agent: ONE\r\nHost: %s\r\nConnection: %s\r\nKeep-Alive: timeout=2000, max=10000\r\n"),"POST", path, SERVER_URL, "keep-alive");
           Serial.println(index);
           p += sprintf_P(p, PSTR("Content-length: %u\r\n"), index);
     
           p += sprintf_P(p, PSTR("\r\n"));
     
           sprintf_P(buffer, PSTR("AT+CIPSEND=%u\r\n"), (unsigned int)(p - header) + index);
-          if (sendCommand(buffer, 1000, ">")) {
+          if (sendCommand(buffer, 2000, ">")) {
             // send HTTP header
             one.xbWrite(header);
             delay(50);
             // send POST payload if any
             
             if (charBuff) one.xbWrite(charBuff);
-            if (one.xbReceive(buffer, sizeof(buffer), 1000, "SEND OK")) {             
+            if (one.xbReceive(buffer, sizeof(buffer), 2000, "SEND OK")) {             
 //              Serial.println(F("Data sent"));
             }        
-//          else 
-//            Serial.println(F("Data sent 2"));
+            errFlag=0;
           }
           else
           {
@@ -198,8 +200,9 @@ void Openfile()
             sprintf_P(buffer, PSTR("AT+CIPCLOSE\r\n"));
             sendCommand(buffer);
             counter=0;
+            errFlag=1;
 
-            delay(2000);
+            delay(500);
              
             sprintf_P(buffer, PSTR("AT+CIPSTART=\"TCP\",\"%s\",%d\r\n"), SERVER_URL, SERVER_PORT);
             if(sendCommand(buffer, 10000, "Linked"))
@@ -213,13 +216,19 @@ void Openfile()
               
           }
          }
-       buffer[0] = 0;         
-       index = 0;
-       charBuff[0]=0;
+
+       if(errFlag==0)
+       {         
+         index = 0;
+         charBuff[0]=0;
+       }
+       buffer[0] = 0;
        delay(100);
   
        }
      }
+
+     Serial.println(F("Completed"));
     }
 void loop()
 {
