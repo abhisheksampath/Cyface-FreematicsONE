@@ -1,4 +1,3 @@
-
 #include <SPI.h>
 #include <Wire.h>
 #include <SD.h>
@@ -46,7 +45,7 @@ void setup() {
 //    SD.mkdir("/DataLog");
 
  // Open up the file we're going to log to!
-  dataFiles = SD.open("datalog3.csv", FILE_WRITE);
+  dataFiles = SD.open("datalog.csv", FILE_WRITE);
   if (! dataFiles) {
     Serial.println(F("File error"));
     // Wait forever since we cant write data
@@ -150,7 +149,7 @@ void showGPS()
       
       Serial.println();
   
-      data = data + String(date) + "," + String(time) + "," + String((float)lat / 100000,5) + "," + String((float)lon / 100000,5) + "," + String(gps.altitude()/ 100) + "," + String(gps.speed()* 1852 / 100000) + "," + String(gps.satellites()) + "," + String(AcX,8) + "," + String(AcY,8) + "," + String(AcZ,8) + ",0";
+      data = data + String(date) + "," + String(time) + "," + String((float)lat / 100000,5) + "," + String((float)lon / 100000,5) + "," + String(gps.altitude()/ 100) + "," + String(gps.speed()* 1852 / 100000) + "," + String(gps.satellites()) + "," + String(AcX,8) + "," + String(AcY,8) + "," + String(AcZ,8);
 
       dataFiles.println(data);
       Serial.println(data);
