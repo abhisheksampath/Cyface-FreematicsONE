@@ -15,7 +15,7 @@ COBDSPI one;
 
 File file;
 
-char buffer[250];
+char buffer[220];
 void Openfile();
 
 byte sendCommand(const char* cmd, int timeout = 2000, const char* expected1 = "OK", const char* expected2 = 0)
@@ -124,9 +124,10 @@ void Openfile()
 {
 
 
-        
+  bool Flag;
+  bool Flag2=false;     
   char path[8] = "/tests";
-  char charBuff[85];
+  char charBuff[80];
   unsigned int index=0;
   int counter=0;
   int errFlag=0;
@@ -146,7 +147,7 @@ void Openfile()
   // Rewind the file for read.
   file.seek(0);   
       
-    while (file.available()) {
+    while (Flag=file.available()) {
 
 //      buffer[0]=0; 
       char header[155];
@@ -169,7 +170,7 @@ void Openfile()
           counter++;
           
   
-          p += sprintf_P(p, PSTR("%s %s HTTP/1.1\r\nUser-Agent: ONE\r\nHost: %s\r\nConnection: %s\r\nKeep-Alive: timeout=2000, max=10000\r\n"),"POST", path, SERVER_URL, "keep-alive");
+          p += sprintf_P(p, PSTR("%s %s HTTP/1.1\r\nUser-Agent: ONE\r\nHost: %s\r\nConnection: %s\r\nKeep-Alive: timeout=2000, max=100000\r\n"),"POST", path, SERVER_URL, "keep-alive");
           Serial.println(index);
           p += sprintf_P(p, PSTR("Content-length: %u\r\n"), index);
     
@@ -187,6 +188,7 @@ void Openfile()
 //              Serial.println(F("Data sent"));
             }        
             errFlag=0;
+            Flag2=true;
           }
           else
           {
@@ -207,11 +209,11 @@ void Openfile()
             sprintf_P(buffer, PSTR("AT+CIPSTART=\"TCP\",\"%s\",%d\r\n"), SERVER_URL, SERVER_PORT);
             if(sendCommand(buffer, 10000, "Linked"))
             {
-              Serial.println("L");
+              Serial.println(F("L")); //Linked.
               } 
               else
               {
-              Serial.println("NL");
+              Serial.println(F("NL")); //Not linked.
               } 
               
           }
@@ -228,7 +230,11 @@ void Openfile()
        }
      }
 
-     Serial.println(F("Completed"));
+    if(Flag2 && !Flag)
+    {
+     SD.remove("datalog.csv");
+     Serial.println(F("Done"));
+    }
     }
 void loop()
 {
