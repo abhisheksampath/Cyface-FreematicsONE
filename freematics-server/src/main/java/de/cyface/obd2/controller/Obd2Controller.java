@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -31,6 +32,10 @@ import java.io.Writer;
  */
 @RestController
 public final class Obd2Controller {
+
+    public static String vinNumber;
+    public static boolean timeFlag;
+    public static String timeStamp1;
 
     /**
      * <p>
@@ -56,6 +61,25 @@ public final class Obd2Controller {
     @Autowired
     private Channels channels;
 
+
+//     public class dataBody {
+//     public String date;
+//     public String timestamp;
+//     public String gpsPoints;
+//     public Person() {       
+//     }
+//     public Person(String firstName, String lastName,
+//                 int age) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+//     public String toString() {
+//         return "[" + firstName + " " + lastName +
+//                " " + age +"]";
+//     }
+// }
+
     /**
      * <p>
      * Root method for printing the already received data to the screen.
@@ -74,12 +98,27 @@ public final class Obd2Controller {
     public void tests(@RequestBody final String dataBody) {
         // String string1 = new String(dataBody);
 
-        LOGGER.debug("Pass into the iris.");
+        // LOGGER.debug("Pass into the iris.");
+        char hash = dataBody.charAt(0);
+
+        if(hash=='#')
+        {
+            vinNumber=dataBody.substring(1);
+            timeFlag=true;
+
+        }
+       
+       else 
+       {
+        String jo = parsBody(dataBody);
+
+        JSONObject jsonObj = new JSONObject(jo);
+         // String[] entries = dataBody.split(",");
         
-        LOGGER.debug(dataBody);
-        // return("Pass into the iris.");
-        // return(dataBody);
-// @RequestBody final String dataBody
+        LOGGER.debug(jsonObj.toString());
+    
+    }
+        // return(jsonObj.toString());
     }
     /**
      * <p>
@@ -132,6 +171,48 @@ public final class Obd2Controller {
      * @param body One row of data as received from the Freematics OBD II dongle.
      * @return A parsed representation of the parsed body.
      */
+
+    private String parsBody(final String dataBody)
+    {   
+
+        String[] entries = dataBody.split(",");
+        String json;
+
+        if(timeFlag)
+        {
+            timeStamp1=entries[1];
+            timeFlag=false;
+        }
+
+        json = "{\"date\":\"" + entries[0] + "\"";
+
+        json += ",\"timestamp\":\"" + entries[1] + "\"";
+
+        json += ",\"id\":\"" + vinNumber + timeStamp1 + "\"";
+
+        json += ",\"deviceId\":\"" + vinNumber + "\"";
+
+        json += ",\"vehicle\":\"CAR\"";
+
+        json += ",\"gpsPoints\":{\"latitude\":\""+ entries[2] + "\"";
+        json += ",\"longitude\":\"" + entries[3] + "\"";
+        json += ",\"altitude\":\"" + entries[4] + "\"";
+        json += ",\"speed\":\"" + entries[5] + "\"";
+        json += ",\"satellites\":\"" + entries[6] + "\"";
+        json += ",\"timestamp\":\"" + entries[1] + "\"}";
+
+        json += ",\"accelerationPoints\":{\"ax\":\""+ entries[7] + "\"";
+        json += ",\"ay\":\"" + entries[8] + "\"";
+        json += ",\"az\":\"" + entries[9] + "\"";
+        json += ",\"timestamp\":\"" + entries[1] + "\"}}";
+
+        // LOGGER.debug(json);
+        return json;
+    }
+
+
+
+
     private InputData parseBody(final String body) {
         String[] entries = body.split(" ");
 

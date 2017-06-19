@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="3.0.1" sequence="0" timestamp="1493316276954" analysisTimestamp="1493316276970" release="">
+<BugCollection version="3.0.1" sequence="0" timestamp="1497889378308" analysisTimestamp="1497889378328" release="">
   <Project projectName="">
     <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\test\de\cyface\MessboxServerApplicationTests.class</Jar>
     <Jar>C:\Users\goget\Documents\GitHub\freematics-server\build\classes\test\de\cyface\obd2\controller\ChannelsTest.class</Jar>
@@ -12,13 +12,16 @@
     <AuxClasspathEntry>C:\Users\goget\Documents\GitHub\freematics-server\build\resources\main</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\1.4.0.RELEASE\bcefa854b75a7e0bcf612bfbe030bdcb05c9da82\spring-boot-starter-web-1.4.0.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.1\905075e6c80f206bbe6cf1e809d2caa69f420c76\commons-lang3-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.json\json\20160810\aca5eb39e2a12fddd6c472b240afe9ebea3a6733\json-20160810.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.8.8.1\fb1930cd0b1b36924717229f56ca80d785401ff8\jackson-databind-2.8.8.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-test\1.4.0.RELEASE\8960b7357acd9819bc357fe96a9768a9fb010ccf\spring-boot-starter-test-1.4.0.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\1.4.0.RELEASE\9eb9be27958cc17de9673a6fbbdaf16fb65a7fdc\spring-boot-starter-1.4.0.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\1.4.0.RELEASE\9f3530cbc1998b9aeebd0a5c070f5d4f24357610\spring-boot-starter-tomcat-1.4.0.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-validator\5.2.4.Final\fb18766b576aa6632bcfe9a20a023cbd52bf9769\hibernate-validator-5.2.4.Final.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.8.1\c04eb2cc599cd1742889bfa7cc41878db0d152f5\jackson-databind-2.8.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\4.3.2.RELEASE\562b3b775b6e8e7113b5d23b21946f939658bd19\spring-web-4.3.2.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\4.3.2.RELEASE\99b68a8aca2ed67ad523e7341a90dd1c90fd669e\spring-webmvc-4.3.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.8.1\4465fda9834ab27eac2a76f9a378738d15a9b4fa\jackson-annotations-2.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.8.1\fd13b1c033741d48291315c6370f7d475a42dccf\jackson-core-2.8.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-test\1.4.0.RELEASE\2fd44f79ea69c6e2b485d895cbc89e314c6f886c\spring-boot-test-1.4.0.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-test-autoconfigure\1.4.0.RELEASE\632e93da48afb7a2f4185cdb7b2bd300b7322579\spring-boot-test-autoconfigure-1.4.0.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.jayway.jsonpath\json-path\2.2.0\22290d17944bd239fabf5ac69005a60a7ecbbbcb\json-path-2.2.0.jar</AuxClasspathEntry>
@@ -40,8 +43,6 @@
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\javax.validation\validation-api\1.1.0.Final\8613ae82954779d518631e05daa73a6a954817d5\validation-api-1.1.0.Final.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.3.0.Final\3616bb87707910296e2c195dc016287080bba5af\jboss-logging-3.3.0.Final.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.3.1\2ad2fd09dcf5607ca96f8ef432096a96986c40a\classmate-1.3.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.8.1\4465fda9834ab27eac2a76f9a378738d15a9b4fa\jackson-annotations-2.8.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.8.1\fd13b1c033741d48291315c6370f7d475a42dccf\jackson-core-2.8.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\4.3.2.RELEASE\caef216e995f565dd4ab165ec5918ff44487615d\spring-aop-4.3.2.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\4.3.2.RELEASE\9e87f48f65a33a017f2dd027911947a28be29f93\spring-beans-4.3.2.RELEASE.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\4.3.2.RELEASE\e52782b824e097c3b1586b497fc6be0e95020770\spring-context-4.3.2.RELEASE.jar</AuxClasspathEntry>
@@ -49,7 +50,6 @@
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\net.minidev\json-smart\2.2.1\5b9e5df7a62d1279b70dc882b041d249c4f0b002\json-smart-2.2.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.21\139535a69a4239db087de9bab0bee568bf8e0b70\slf4j-api-1.7.21.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.1\87c0ea803b69252868d09308b4618f766f135a96\objenesis-2.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.json\json\20140107\d1ffca6e2482b002702c6a576166fd685e3370e3\json-20140107.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.1.7\9865cf6994f9ff13fce0bf93f2054ef6c65bb462\logback-classic-1.1.7.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.21\331b564a3a42f002a0004b039c1c430da89062cd\jcl-over-slf4j-1.7.21.jar</AuxClasspathEntry>
     <AuxClasspathEntry>C:\Users\goget\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.21\2f22c882ffa479d1e9ff4eb0e8e2c29f2a0871ed\jul-to-slf4j-1.7.21.jar</AuxClasspathEntry>
@@ -65,7 +65,7 @@
     <SrcDir>C:\Users\goget\Documents\GitHub\freematics-server\src\test\java\de\cyface\persistence\ChannelTest.java</SrcDir>
   </Project>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Thu, 27 Apr 2017 23:34:36 +0530" total_classes="6" referenced_classes="56" total_bugs="0" total_size="146" num_packages="3" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="8.80" clock_seconds="1.98" peak_mbytes="185.64" alloc_mbytes="3611.00" gc_seconds="0.03">
+  <FindBugsSummary timestamp="Mon, 19 Jun 2017 21:52:58 +0530" total_classes="6" referenced_classes="56" total_bugs="0" total_size="146" num_packages="3" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="9.11" clock_seconds="2.14" peak_mbytes="185.82" alloc_mbytes="3611.00" gc_seconds="0.03">
     <PackageStats package="de.cyface" total_bugs="0" total_types="1" total_size="5">
       <ClassStats class="de.cyface.MessboxServerApplicationTests" sourceFile="MessboxServerApplicationTests.java" interface="false" size="5" bugs="0"/>
     </PackageStats>
@@ -79,17 +79,17 @@
       <ClassStats class="de.cyface.persistence.ChannelTest" sourceFile="ChannelTest.java" interface="false" size="13" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="560" invocations="786" avgMicrosecondsPerInvocation="712" maxMicrosecondsPerInvocation="1402" standardDeviationMircosecondsPerInvocation="290"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="251" invocations="778" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="14889" standardDeviationMircosecondsPerInvocation="809"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="89" invocations="56" avgMicrosecondsPerInvocation="1595" maxMicrosecondsPerInvocation="12222" standardDeviationMircosecondsPerInvocation="2537"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="56" invocations="56" avgMicrosecondsPerInvocation="1007" maxMicrosecondsPerInvocation="5612" standardDeviationMircosecondsPerInvocation="1378"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="47" invocations="137" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="3754" standardDeviationMircosecondsPerInvocation="475"/>
-      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="43" invocations="17" avgMicrosecondsPerInvocation="2542" maxMicrosecondsPerInvocation="20512" standardDeviationMircosecondsPerInvocation="4880"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="744" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="1273" standardDeviationMircosecondsPerInvocation="96"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="17" avgMicrosecondsPerInvocation="2086" maxMicrosecondsPerInvocation="31576" standardDeviationMircosecondsPerInvocation="7376"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="97" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="12559" standardDeviationMircosecondsPerInvocation="1303"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="28" invocations="17" avgMicrosecondsPerInvocation="1704" maxMicrosecondsPerInvocation="11881" standardDeviationMircosecondsPerInvocation="2904"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="27" invocations="17" avgMicrosecondsPerInvocation="1601" maxMicrosecondsPerInvocation="8980" standardDeviationMircosecondsPerInvocation="2311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="737" invocations="786" avgMicrosecondsPerInvocation="938" maxMicrosecondsPerInvocation="91536" standardDeviationMircosecondsPerInvocation="3494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="217" invocations="778" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="14400" standardDeviationMircosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="88" invocations="56" avgMicrosecondsPerInvocation="1583" maxMicrosecondsPerInvocation="10390" standardDeviationMircosecondsPerInvocation="2454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="59" invocations="56" avgMicrosecondsPerInvocation="1061" maxMicrosecondsPerInvocation="5938" standardDeviationMircosecondsPerInvocation="1464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="45" invocations="137" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="3539" standardDeviationMircosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="744" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1145" standardDeviationMircosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="33" invocations="17" avgMicrosecondsPerInvocation="1974" maxMicrosecondsPerInvocation="29859" standardDeviationMircosecondsPerInvocation="6976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="33" invocations="97" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="11848" standardDeviationMircosecondsPerInvocation="1241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="31" invocations="17" avgMicrosecondsPerInvocation="1844" maxMicrosecondsPerInvocation="13138" standardDeviationMircosecondsPerInvocation="3247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="17" avgMicrosecondsPerInvocation="1788" maxMicrosecondsPerInvocation="7854" standardDeviationMircosecondsPerInvocation="2599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="25" invocations="17" avgMicrosecondsPerInvocation="1523" maxMicrosecondsPerInvocation="8918" standardDeviationMircosecondsPerInvocation="2266"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>
