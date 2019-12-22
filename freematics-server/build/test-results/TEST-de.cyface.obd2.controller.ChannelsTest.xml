@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.cyface.obd2.controller.ChannelsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-19T16:23:07" hostname="LAPTOP-QU4DF8U6" time="0.087">
-  <properties/>
-  <testcase name="testGetExistingChannel" classname="de.cyface.obd2.controller.ChannelsTest" time="0.087"/>
-  <testcase name="testGetNonExistantChannel" classname="de.cyface.obd2.controller.ChannelsTest" time="0.0"/>
-  <testcase name="testGetNewIdentifier" classname="de.cyface.obd2.controller.ChannelsTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
